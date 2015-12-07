@@ -2,8 +2,11 @@
 #####     Optimización de Memoria     #####
 ###########################################
 
+library(pryr)
+
 # Tamaño de objetos
 object_size(1:20)
+object_size(vector(length = 10))
 object_size(mean)
 object_size(mtcars)
 
@@ -39,8 +42,6 @@ cppFunction('int add (int x, int y, int z){
             int sum=x+y+z;
             return sum;
             }')
-
-
 
 # Sentencias SQL
 install.packages('sqldf', dependencies = TRUE)
